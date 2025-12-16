@@ -1,6 +1,6 @@
 const SeventhSection = () => {
   return (
-    <section className="w-full overflow-hidden bg-white">
+    <section className="w-full overflow-hidden bg-white sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       <div className="container mx-auto flex flex-col items-center justify-center gap-12 px-6 py-12 md:flex-row md:justify-between md:px-12 md:py-24 lg:gap-24 lg:px-24">
         {/* Text Column */}
         <div className="flex max-w-lg shrink-0 flex-col items-start gap-8 md:max-w-xl">
@@ -27,7 +27,7 @@ const SeventhSection = () => {
               </p>
             </div>
             {/* QR Code */}
-            <div className="h-[74px] w-[74px] shrink-0">
+            <div className="h-18.5 w-18.5 shrink-0">
               <img
                 alt="Scan to download"
                 className="h-full w-full object-cover"
@@ -37,8 +37,8 @@ const SeventhSection = () => {
         </div>
 
         {/* Image Column */}
-        <div className="relative w-full max-w-md shrink-0 md:max-w-[453px]">
-          <div className="relative aspect-[453/626] w-full">
+        <div className="relative w-full max-w-md shrink-0 md:max-w-113.25">
+          <div className="relative aspect-453/626 w-full">
             <img
               alt="App Screenshot"
               src={"/app-screenshot.svg"}

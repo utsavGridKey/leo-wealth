@@ -2,7 +2,7 @@
 
 const FourthSection = () => {
   return (
-    <section className="bg-background-200 gap-4 px-6 py-16 md:px-10 md:py-20 lg:px-24">
+    <section className="bg-background-200 gap-4 px-4 py-16 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       {/* Heading */}
       <p className="text-grey-500 text-center text-sm">Our Services</p>
 

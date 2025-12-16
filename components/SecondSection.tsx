@@ -4,59 +4,111 @@ import { Activity, useState } from "react";
 const SecondSection = () => {
   const [selectedSection, setselectedSection] = useState(0);
 
+  const data = [
+    {
+      title: "Diagnose",
+      subTitle:
+        "We begin with understanding your priorities, obligations, liquidity needs, and the emotional landscape that surrounds them.",
+    },
+    {
+      title: "Design",
+      subTitle:
+        "A tailored asset architecture built around purpose, not products.",
+    },
+    {
+      title: "Deploy",
+      subTitle:
+        "Direct management supported by curated external managers, giving you both expertise and access.",
+    },
+    {
+      title: "Defend",
+      subTitle:
+        "Continuous oversight, risk intelligence, and strategy alignment to protect wealth through seasons of change.",
+    },
+  ];
+
   return (
-    <section className="flex flex-col gap-3 px-6 py-30 md:px-10 lg:px-78">
-      <p className="text-center font-[libre] text-3xl font-semibold">
+    <section className="grid gap-3 px-6 py-4 sm:px-16 md:px-17.5 lg:px-42 lg:py-30 xl:px-78">
+      <p className="col-span-12 text-center font-[libre] text-3xl font-semibold">
         The Architecture of Enduring Wealth
       </p>
-      <p className="text-grey-500 text-center">
+
+      <p className="text-grey-500 col-span-12 text-center">
         We design wealth like architecture: planned, precise, and strong enough
         to weather every cycle.
       </p>
-      <div className="flex w-full items-center justify-center gap-4 pt-14">
-        <div className="w-1/2">
-          {[
-            {
-              title: "Diagnose",
-              subTitle:
-                "We begin with understanding your priorities, obligations, liquidity needs, and the emotional landscape that surrounds them.",
-            },
-            {
-              title: "Design",
-              subTitle:
-                "A tailored asset architecture built around purpose, not products.",
-            },
-            {
-              title: "Deploy",
-              subTitle:
-                "Direct management supported by curated external managers, giving you both expertise and access.",
-            },
-            {
-              title: "Defend",
-              subTitle:
-                "Continuous oversight, risk intelligence, and strategy alignment to protect wealth through seasons of change.",
-            },
-          ]?.map(({ title, subTitle }, index) => {
-            return (
-              <button
-                className="flex w-full cursor-pointer flex-col items-start gap-2 p-2"
-                key={index}
-                onClick={() => {
-                  setselectedSection(index);
-                }}
-              >
-                <p className="font-[libre] text-lg">{title}</p>
-                <Activity
-                  mode={selectedSection === index ? "visible" : "hidden"}
-                >
-                  <p className="text-grey-500 text-start">{subTitle}</p>
-                </Activity>
-              </button>
-            );
-          })}
+
+      <div className="col-span-12 hidden grid-cols-12 items-center gap-6 lg:grid">
+        {/* Left content */}
+        <div className="col-span-12 lg:col-span-6">
+          {data.map(({ title, subTitle }, index) => (
+            <button
+              key={index}
+              onClick={() => setselectedSection(index)}
+              className="flex w-full flex-col items-start gap-2 p-2 text-left"
+            >
+              <p className="font-[libre] text-lg">{title}</p>
+              <Activity mode={selectedSection === index ? "visible" : "hidden"}>
+                <p className="text-grey-500">{subTitle}</p>
+              </Activity>
+            </button>
+          ))}
         </div>
-        <div className="w-1/2">
-          <img src={`/second-section-img-${selectedSection + 1}.svg`} alt="" />
+
+        {/* Right image */}
+        <div className="col-span-12 hidden justify-center lg:col-span-6 lg:flex">
+          <img
+            src={`/second-section-img-${selectedSection + 1}.svg`}
+            alt=""
+            className="max-w-full"
+          />
+        </div>
+      </div>
+
+      <div className="col-span-12 grid grid-cols-12 items-center gap-6 lg:hidden">
+        {/* Left content */}
+        <div className="col-span-12 lg:col-span-6">
+          {data
+            .filter((_, index) => selectedSection === index)
+            .map(({ title, subTitle }, index) => (
+              <button
+                key={index}
+                onClick={() => setselectedSection(index)}
+                className="flex w-full flex-col items-center gap-2 p-2 text-left"
+              >
+                <img
+                  src={`/second-section-img-${selectedSection + 1}.svg`}
+                  alt=""
+                  width={"100%"}
+                />
+                <p className="font-[libre] text-lg">{title}</p>
+                <p className="text-grey-500 text-center">{subTitle}</p>
+              </button>
+            ))}
+        </div>
+        <div className="col-span-12 flex items-center justify-center gap-5">
+          <button
+            onClick={() => {
+              if (selectedSection === 0) {
+                setselectedSection(data.length - 1);
+              } else {
+                setselectedSection((pre) => pre - 1);
+              }
+            }}
+          >
+            <img src="/right-arrow.svg" alt="" className="rotate-180" />
+          </button>
+          <button
+            onClick={() => {
+              if (selectedSection === data.length - 1) {
+                setselectedSection(0);
+              } else {
+                setselectedSection((pre) => pre + 1);
+              }
+            }}
+          >
+            <img src="/right-arrow.svg" alt="" />
+          </button>
         </div>
       </div>
     </section>

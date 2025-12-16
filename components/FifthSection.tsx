@@ -2,7 +2,7 @@
 
 const FifthSection = () => {
   return (
-    <section className="bg-black-600 flex flex-col items-center gap-6 px-6 py-16 md:px-10 md:py-32 lg:px-24">
+    <section className="bg-black-600 flex flex-col items-center gap-6 px-4 py-16 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       <img src="/fifth-section.svg" alt="" />
       <p className="text-grey-100 text-center font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl">
         Where Strategy Meets Execution

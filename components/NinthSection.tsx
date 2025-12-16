@@ -11,7 +11,7 @@ const NinthSection = () => {
   }>();
 
   return (
-    <section className="flex flex-col px-6 py-16 md:px-10 md:py-32 lg:px-24">
+    <section className="flex flex-col px-6 py-16 sm:px-16 md:px-17.5 md:py-32 lg:px-42 xl:px-78">
       <p className="text-grey-600 text-center font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl">
         The Custodians of Clarity{" "}
       </p>

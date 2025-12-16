@@ -2,7 +2,7 @@
 
 const ThirdSection = () => {
   return (
-    <section className="flex flex-col gap-3 px-6 py-30 md:px-10 lg:px-78">
+    <section className="flex flex-col gap-3 px-4 py-30 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       <p className="text-center font-[libre] text-3xl font-semibold">
         India’s Circle of Continuity{" "}
       </p>
@@ -12,7 +12,7 @@ const ThirdSection = () => {
         custodians of long-standing legacies.
       </p>
       <div className="flex w-full items-center justify-center gap-4 pt-14">
-        <div className="flex w-full gap-6">
+        <div className="flex w-full gap-6 overflow-auto">
           {[
             {
               title: "For Wealth Creators",

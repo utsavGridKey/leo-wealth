@@ -2,7 +2,7 @@
 
 const EighthSection = () => {
   return (
-    <section className="bg-white-100 flex flex-col gap-4 px-6 py-16 md:px-10 md:py-32 lg:px-24">
+    <section className="bg-white-100 flex flex-col gap-4 px-4 py-16 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       <p className="text-grey-600 text-center font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl">
         Great Outcomes Are Rarely the Work of One
       </p>

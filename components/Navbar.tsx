@@ -38,10 +38,6 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="bg-black-600 rounded-sm px-4 py-2 text-white">
-            Let’s Talk
-          </button>
-
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
@@ -63,7 +59,6 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-
       {isOpen && (
         <div className="border-grey-100 border-t md:hidden">
           <div className="flex flex-col gap-3 px-4 py-4">
