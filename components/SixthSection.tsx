@@ -31,7 +31,7 @@ const SixthSection = () => {
           ease: "easeOut",
           delay: 0.2,
         }}
-        src="/sizth-img.svg"
+        src="/sizth-img.webp"
         alt=""
       />
       <div>

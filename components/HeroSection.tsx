@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
-    <section className="grid min-h-screen place-items-center bg-[url('/hero-image.svg')] bg-cover bg-center bg-no-repeat p-4 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
+    <section className="grid min-h-screen place-items-center bg-[url('/hero-img.webp')] bg-cover bg-center bg-no-repeat p-4 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
       <motion.div
         initial={{
           opacity: 0,

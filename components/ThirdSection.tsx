@@ -72,7 +72,7 @@ const ThirdSection = () => {
                 className="flex w-full cursor-pointer flex-col items-start gap-4 overflow-hidden p-2"
                 key={index}
               >
-                <img src={`/third-section-img-${index + 1}.svg`} alt="" />
+                <img src={`/third-section-img-${index + 1}.webp`} alt="" />
                 <div className="flex flex-col gap-2">
                   <p className="w-full text-center font-[libre] text-lg font-semibold">
                     {title}

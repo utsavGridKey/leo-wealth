@@ -83,7 +83,7 @@ const SecondSection = () => {
         {/* Right image */}
         <div className="col-span-12 hidden justify-center lg:col-span-6 lg:flex">
           <img
-            src={`/second-section-img-${selectedSection + 1}.svg`}
+            src={`/${data[selectedSection].title.toLowerCase()}.webp`}
             alt=""
             className="max-w-full"
           />
