@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Inter, Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${libre.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

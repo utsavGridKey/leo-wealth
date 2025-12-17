@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import NinthSection from "@/components/NinthSection";
 import SecondSection from "@/components/SecondSection";
 import SixthSection from "@/components/SixthSection";
+import TenthSection from "@/components/TenthSection";
 import ThirdSection from "@/components/ThirdSection";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       {/* <SeventhSection /> */}
       <EighthSection />
       <NinthSection />
+      <TenthSection />
     </main>
   );
 }
