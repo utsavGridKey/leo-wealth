@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "motion/react";
 import { useState } from "react";
 
 const NinthSection = () => {
@@ -8,19 +9,47 @@ const NinthSection = () => {
     name: string;
     designation: string;
     image: string;
-  }>();
+  }>({
+    title: "Investing is planting seeds today for a harvest tomorrow.",
+    name: "Gustavo Culhane",
+    designation: "Managing Director & CEO (Co-founder)",
+    image: "",
+  });
 
   return (
     <section className="flex flex-col px-6 py-16 sm:px-16 md:px-17.5 md:py-32 lg:px-42 xl:px-78">
-      <p className="text-grey-600 text-center font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl">
+      <motion.p
+        viewport={{
+          once: true,
+        }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        className="text-grey-600 text-center font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl"
+      >
         The Custodians of Clarity{" "}
-      </p>
-      <p className="text-grey-500 mx-auto mt-3 max-w-3xl text-center text-sm sm:text-base">
+      </motion.p>
+      <motion.p
+        viewport={{
+          once: true,
+        }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+        className="text-grey-500 mx-auto mt-3 max-w-3xl text-center text-sm sm:text-base"
+      >
         Our leadership team combines expertise across investment strategy,
         wealth advisory, tax, structuring, governance, and multi-generational
         planning. Together, they shape a unified, client-first philosophy that
         drives every decision at Leo Wealth.
-      </p>
+      </motion.p>
       <div className="flex items-center gap-18">
         <div className="flex flex-col items-center gap-8">
           {[
@@ -45,7 +74,17 @@ const NinthSection = () => {
             },
           ].map((item, index) => {
             return (
-              <div
+              <motion.div
+                viewport={{
+                  once: true,
+                }}
+                initial={{ y: 80, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: 0.4,
+                }}
                 key={index}
                 className="flex w-full gap-20"
                 onClick={() => {
@@ -61,18 +100,30 @@ const NinthSection = () => {
                     height={53}
                   />
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
-        <div className="flex flex-col items-start gap-4">
+        <motion.div
+          viewport={{
+            once: true,
+          }}
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.6,
+          }}
+          className="flex flex-col items-start gap-4"
+        >
           <img src="/qoutes.svg" alt="" />
           <p className="font-[libre] text-[48px]">{selectedItem?.title}</p>
           <div className="flex flex-col items-start">
             <p>{selectedItem?.name}</p>
             <p>{selectedItem?.designation}</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

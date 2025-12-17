@@ -4,7 +4,6 @@ import FourthSection from "@/components/FourthSection";
 import HeroSection from "@/components/HeroSection";
 import NinthSection from "@/components/NinthSection";
 import SecondSection from "@/components/SecondSection";
-import SeventhSection from "@/components/SeventhSection";
 import SixthSection from "@/components/SixthSection";
 import ThirdSection from "@/components/ThirdSection";
 
@@ -17,7 +16,7 @@ export default function Home() {
       <FourthSection />
       <FifthSection />
       <SixthSection />
-      <SeventhSection />
+      {/* <SeventhSection /> */}
       <EighthSection />
       <NinthSection />
     </main>

@@ -1,7 +1,22 @@
+"use client";
+import { motion } from "motion/react";
+
 const HeroSection = () => {
   return (
     <section className="grid min-h-screen place-items-center bg-[url('/hero-image.svg')] bg-cover bg-center bg-no-repeat p-4 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
-      <div className="col-span-12 grid justify-items-center gap-4 text-center sm:col-span-6">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        viewport={{ once: true }}
+        className="col-span-12 grid justify-items-center gap-4 text-center sm:col-span-6"
+      >
         <p className="max-w-3xl font-['libre'] text-lg font-medium sm:text-xl md:text-5xl">
           For Those Who Think Beyond a Lifetime.
         </p>
@@ -14,7 +29,7 @@ const HeroSection = () => {
         <button className="bg-black-600 rounded-sm px-6 py-3 text-sm font-medium text-white sm:text-base">
           Request a Private Consultation
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,13 +1,39 @@
 "use client";
 
+import { motion } from "motion/react";
+
 const SixthSection = () => {
   return (
     <section className="bg-white-400 flex flex-col gap-6 px-6 py-16 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
-      <p className="text-grey-600 text-start font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl">
+      <motion.p
+        viewport={{
+          once: true,
+        }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        className="text-grey-600 text-start font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl"
+      >
         Built for Indian Capital.
         <br /> Built for Indian Values.{" "}
-      </p>
-      <img src="/sizth-img.svg" alt="" />
+      </motion.p>
+      <motion.img
+        viewport={{
+          once: true,
+        }}
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+        src="/sizth-img.svg"
+        alt=""
+      />
       <div>
         {[
           {
@@ -21,7 +47,20 @@ const SixthSection = () => {
           },
         ].map((item, index) => {
           return (
-            <div key={index} className="flex items-baseline gap-2">
+            <motion.div
+              viewport={{
+                once: true,
+              }}
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              key={index}
+              className="flex items-baseline gap-2"
+            >
               <img src="/check-fill.svg" alt="" />
               <div>
                 <p className="text-grey-600 text-start font-['libre'] text-lg font-semibold">
@@ -34,7 +73,7 @@ const SixthSection = () => {
                   }}
                 />
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

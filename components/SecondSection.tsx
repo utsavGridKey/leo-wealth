@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react";
 import { Activity, useState } from "react";
 
 const SecondSection = () => {
@@ -28,17 +29,41 @@ const SecondSection = () => {
   ];
 
   return (
-    <section className="grid gap-3 px-6 py-4 sm:px-16 md:px-17.5 lg:px-42 lg:py-30 xl:px-78">
-      <p className="col-span-12 text-center font-[libre] text-3xl font-semibold">
+    <motion.section className="grid gap-3 px-6 py-4 sm:px-16 md:px-17.5 lg:px-42 lg:py-30 xl:px-78">
+      <motion.p
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{
+          once: true,
+        }}
+        className="col-span-12 text-center font-[libre] text-3xl font-semibold"
+      >
         The Architecture of Enduring Wealth
-      </p>
+      </motion.p>
 
-      <p className="text-grey-500 col-span-12 text-center">
+      <motion.p
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+        viewport={{
+          once: true,
+        }}
+        className="text-grey-500 col-span-12 text-center"
+      >
         We design wealth like architecture: planned, precise, and strong enough
         to weather every cycle.
-      </p>
+      </motion.p>
 
-      <div className="col-span-12 hidden grid-cols-12 items-center gap-6 lg:grid">
+      <motion.div
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+        viewport={{
+          once: true,
+        }}
+        className="col-span-12 hidden grid-cols-12 items-center gap-6 lg:grid"
+      >
         {/* Left content */}
         <div className="col-span-12 lg:col-span-6">
           {data.map(({ title, subTitle }, index) => (
@@ -63,9 +88,17 @@ const SecondSection = () => {
             className="max-w-full"
           />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="col-span-12 grid grid-cols-12 items-center gap-6 lg:hidden">
+      <motion.div
+        initial={{ y: 80, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+        viewport={{
+          once: true,
+        }}
+        className="col-span-12 grid grid-cols-12 items-center gap-6 lg:hidden"
+      >
         {/* Left content */}
         <div className="col-span-12 lg:col-span-6">
           {data
@@ -110,8 +143,8 @@ const SecondSection = () => {
             <img src="/right-arrow.svg" alt="" />
           </button>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
