@@ -33,7 +33,7 @@ const SecondSection = () => {
       <motion.p
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{
           once: true,
         }}
@@ -45,7 +45,7 @@ const SecondSection = () => {
       <motion.p
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+        transition={{ duration: 0.3, ease: "easeOut", delay: 0.4 }}
         viewport={{
           once: true,
         }}
@@ -58,7 +58,7 @@ const SecondSection = () => {
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+        transition={{ duration: 0.3, ease: "easeOut", delay: 0.6 }}
         viewport={{
           once: true,
         }}
@@ -93,7 +93,7 @@ const SecondSection = () => {
       <motion.div
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut", delay: 1 }}
         viewport={{
           once: true,
         }}

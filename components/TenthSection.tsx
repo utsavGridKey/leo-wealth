@@ -12,7 +12,7 @@ const TenthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
         }}
         src="/book-icon.svg"
@@ -25,7 +25,7 @@ const TenthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
           delay: 0.2,
         }}
@@ -40,7 +40,7 @@ const TenthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
           delay: 0.4,
         }}
@@ -61,7 +61,7 @@ const TenthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
           delay: 0.6,
         }}

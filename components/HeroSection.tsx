@@ -12,7 +12,7 @@ const HeroSection = () => {
           opacity: 1,
         }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
         }}
         viewport={{ once: true }}
         className="col-span-12 grid justify-items-center gap-4 text-center sm:col-span-6"

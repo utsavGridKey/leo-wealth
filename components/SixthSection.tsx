@@ -12,7 +12,7 @@ const SixthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
         }}
         className="text-grey-600 text-start font-['libre'] text-2xl font-semibold sm:text-3xl md:text-4xl"
@@ -27,7 +27,7 @@ const SixthSection = () => {
         initial={{ y: 80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
           delay: 0.2,
         }}
@@ -54,7 +54,7 @@ const SixthSection = () => {
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{
-                duration: 0.5,
+                duration: 0.3,
                 ease: "easeOut",
                 delay: index * 0.2,
               }}
