@@ -3,7 +3,7 @@
 const AboutUs = () => {
   return (
     <section className="flex flex-col gap-4 px-4 py-5 sm:px-16 md:px-17.5 lg:px-42 xl:px-78">
-      <div className="text-grey-500 mt-10 text-center font-['Inter'] text-[12px] leading-[160%] font-medium tracking-[2.4px] uppercase">
+      <div className="text-grey-500 mt-2 text-center font-['Inter'] text-[12px] leading-[160%] font-medium tracking-[2.4px] uppercase">
         About Leo Wealth
       </div>
 
