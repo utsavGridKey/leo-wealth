@@ -14,14 +14,14 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-7 md:flex">
           <Link
-            href="/offerings"
+            href="/our-services"
             className="text-grey-600 hover:text-grey-900 text-xs font-medium"
           >
-            Our Offerings
+            Our Services
           </Link>
 
           <Link
-            href="/about"
+            href="/about-us"
             className="text-grey-600 hover:text-grey-900 text-xs font-medium"
           >
             About Us

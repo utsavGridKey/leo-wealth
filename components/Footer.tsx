@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-black-500 px-6 py-16 sm:px-16 md:py-24 lg:px-42 xl:px-78">
@@ -13,9 +15,24 @@ const Footer = () => {
               Quick links
             </p>
             <div className="text-grey-100 flex flex-col gap-2 text-sm">
-              <span>Disclosure</span>
-              <span>Privacy Policy</span>
-              <span>Terms & Condition</span>
+              <Link
+                href="/disclosure"
+                className="underline-offset-4 hover:underline"
+              >
+                Disclosure
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="underline-offset-4 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="underline-offset-4 hover:underline"
+              >
+                Terms & Condition
+              </Link>
             </div>
           </div>
 
