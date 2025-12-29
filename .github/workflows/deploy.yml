@@ -1,0 +1,42 @@
+name: React frontend CI/CD with AWS S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push-main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: AKIA2H34JFDK7EXZLKM6
+          aws-secret-access-key: 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
+          aws-region: us-east-1
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install project dependencies with npm
+        run: |
+          export NODE_OPTIONS="--max_old_space_size=4196"
+          npm install --legacy-peer-deps
+
+      - name: Build production React app
+        run: |
+          export NODE_OPTIONS="--max_old_space_size=4196"
+          CI=false npm run build
+
+      - name: Upload production build to S3 bucket
+        run: |
+          aws s3 sync out s3://leo-wealth --delete
+          aws cloudfront create-invalidation --distribution-id E320BXJ0XMLWZS --paths '/*'
