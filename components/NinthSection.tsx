@@ -138,7 +138,7 @@ const NinthSection = () => {
             alt=""
             className="self-start md:self-start lg:self-start"
           />
-          <p className="font-[libre] text-[46px]">{selectedItem?.title}</p>
+          <p className="font-[libre] text-[45px]">{selectedItem?.title}</p>
           <div className="flex flex-col items-start">
             <p>{selectedItem?.name}</p>
             <p>{selectedItem?.designation}</p>
