@@ -92,7 +92,7 @@ const NinthSection = () => {
                 }}
               >
                 <div className="flex flex-col items-center gap-1 lg:flex-row">
-                  <div className="h-30 w-30 shrink-0 overflow-hidden rounded-full bg-gray-300">
+                  <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full bg-gray-300">
                     <img
                       src={item.image || undefined}
                       alt=""
@@ -138,7 +138,7 @@ const NinthSection = () => {
             alt=""
             className="self-start md:self-start lg:self-start"
           />
-          <p className="font-[libre] text-[48px]">{selectedItem?.title}</p>
+          <p className="font-[libre] text-[45px]">{selectedItem?.title}</p>
           <div className="flex flex-col items-start">
             <p>{selectedItem?.name}</p>
             <p>{selectedItem?.designation}</p>

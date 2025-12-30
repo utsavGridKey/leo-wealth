@@ -110,7 +110,7 @@ const SecondSection = () => {
                 className="flex w-full flex-col items-center gap-2 p-2 text-left"
               >
                 <img
-                  src={`/second-section-img-${selectedSection + 1}.svg`}
+                  src={`/${data[selectedSection].title.toLowerCase()}.webp`}
                   alt=""
                   width={"100%"}
                 />
