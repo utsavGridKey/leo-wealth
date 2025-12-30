@@ -10,10 +10,10 @@ const NinthSection = () => {
     designation: string;
     image: string;
   }>({
-    title: "Investing is planting seeds today for a harvest tomorrow.",
-    name: "Gustavo Culhane",
+    title: "Wealth lasts when decisions are made with tomorrow in mind.",
+    name: "Ritesh Lahoti",
     designation: "Managing Director & CEO (Co-founder)",
-    image: "",
+    image: "/r-photo.png",
   });
 
   return (
@@ -43,34 +43,34 @@ const NinthSection = () => {
           ease: "easeOut",
           delay: 0.2,
         }}
-        className="text-grey-500 mx-auto mt-3 max-w-3xl text-center text-sm sm:text-base"
+        className="text-grey-500 mb mx-auto mt-3 mb-10 max-w-3xl text-center text-sm sm:text-base"
       >
         Our leadership team combines expertise across investment strategy,
         wealth advisory, tax, structuring, governance, and multi-generational
         planning. Together, they shape a unified, client-first philosophy that
         drives every decision at Leo Wealth.
       </motion.p>
-      <div className="flex items-center gap-18">
-        <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-12 md:gap-16 lg:flex-row lg:items-center lg:gap-18">
+        <div className="flex flex-row items-start gap-6 md:flex-row lg:flex-col lg:items-center lg:gap-8">
           {[
             {
               title:
-                "Investing is planting seeds today for a harvest tomorrow.",
-              name: "Gustavo Culhane",
+                "Wealth lasts when decisions are made with tomorrow in mind.",
+              name: "Ritesh Lahoti",
               designation: "Managing Director & CEO (Co-founder)",
-              image: "",
+              image: "/r-photo.png",
             },
             {
-              title: "Investing is the bridge between your dreams and reality.",
-              name: "Gustavo Culhane",
+              title: "Structure is not visible, but its absence always is.",
+              name: "Priyanka Lahoti",
               designation: "Managing Director & CEO (Co-founder)",
               image: "",
             },
             {
               title: "Financial freedom begins with smart investments.",
-              name: "Gustavo Culhane",
+              name: "Deep Jethloja",
               designation: "Managing Director & CEO (Co-founder)",
-              image: "",
+              image: "/d-photo.jpg",
             },
           ].map((item, index) => {
             return (
@@ -91,14 +91,30 @@ const NinthSection = () => {
                   setselectedItem(item);
                 }}
               >
-                <div className="flex gap-2">
-                  <img src="/globe.svg" alt="" width={120} height={120} />
-                  <img
-                    src="/filled-right-arrow.svg"
-                    alt=""
-                    width={53}
-                    height={53}
-                  />
+                <div className="flex flex-col items-center gap-1 lg:flex-row">
+                  <div className="h-30 w-30 shrink-0 overflow-hidden rounded-full bg-gray-300">
+                    <img
+                      src={item.image || undefined}
+                      alt=""
+                      className={`h-full w-full object-cover object-[50%_20%] transition duration-300 ${
+                        selectedItem.name === item.name
+                          ? "grayscale-0"
+                          : "grayscale"
+                      }`}
+                    />
+                  </div>
+
+                  <div className="flex w-14 justify-center md:mt-2 lg:mt-0">
+                    {selectedItem.name === item.name && (
+                      <img
+                        src="/filled-right-arrow.svg"
+                        alt=""
+                        width={53}
+                        height={53}
+                        className="rotate-90 transition-transform duration-300 lg:rotate-0"
+                      />
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );
@@ -115,9 +131,13 @@ const NinthSection = () => {
             ease: "easeOut",
             delay: 0.6,
           }}
-          className="flex flex-col items-start gap-4"
+          className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left"
         >
-          <img src="/qoutes.svg" alt="" />
+          <img
+            src="/qoutes.svg"
+            alt=""
+            className="self-start md:self-start lg:self-start"
+          />
           <p className="font-[libre] text-[48px]">{selectedItem?.title}</p>
           <div className="flex flex-col items-start">
             <p>{selectedItem?.name}</p>
